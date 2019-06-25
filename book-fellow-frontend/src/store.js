@@ -4,13 +4,15 @@ import usersReducer from "./reducers/users.js";
 import currentUser from "./reducers/currentUser.js";
 import loginForm from "./reducers/loginForm.js";
 import myBooks from "./reducers/myBooks.js";
+import myReviews from "./reducers/myReviews.js";
 
 const users = () => [];
 const reducer = combineReducers({
   users: usersReducer, //array of users
   currentUser,
   loginForm,
-  myBooks
+  myBooks,
+  myReviews
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

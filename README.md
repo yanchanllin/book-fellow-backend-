@@ -13,7 +13,7 @@ Run bundle install to install all gem dependencies.
 Run all rake migrations with rake db:migrate
 
 Setup React server frontend:
-Change directories into client folder: cd client
+Change directories into client folder: cd book-fellow-frontend
 
 Run npm install to install all package dependencies
 

@@ -11,4 +11,9 @@ class Api::V1::BooksController < ApplicationController
       end
     end 
 
-end
+    def show
+        book_json = BookSerializer.new(@book).serialized_json
+        render json:book_json
+      end
+
+    end 

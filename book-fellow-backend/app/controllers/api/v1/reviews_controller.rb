@@ -2,18 +2,26 @@ class Api::V1::ReviewsController < ApplicationController
 
     def index
 
-        if logged_in?
-            @reviews = current_user.book.reviews    
+        if params[:book_id]
+            @reviews = Book.find(params[:book_id]).reviews
         render json: ReviewSerializer.new(@reviews)
         else 
             render json: {
-                error: "Must be logged in to see reviews"
+                error: "Must have a book to see reviews"
             }
-      end
+        end
     end 
 
     def show 
-        render json: @review
+    
+        review_json = ReviewSerializer.new(@review).serialized_json
+        render json:review_json
     end 
         
-end
+    private
+
+      def review_params
+        params.require(:review).permit(:content, :rating)
+      end
+
+  end

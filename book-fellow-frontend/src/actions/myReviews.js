@@ -1,5 +1,6 @@
 //synchronous actions
 export const setMyReviews = reviews => {
+  console.log("hi");
   return {
     type: "SET_MY_REVIEWS",
     reviews

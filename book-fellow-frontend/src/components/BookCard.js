@@ -1,12 +1,16 @@
 import React from "react";
+import ReviewCard from "./ReviewCard.js";
 
 const BookCard = ({ book }) => {
   return (
-    <p>
-      <b>Title:{book.attributes.name}</b> by:
-      {book.attributes.author}
-      <br /> [{book.attributes.description}]
-    </p>
+    <div>
+      <li>
+        Title:{book.attributes.name} by:
+        {book.attributes.author} <br />[ {book.attributes.description}]
+        <ReviewCard reviews={book.attributes.reviews} />
+        {/* <ReviewForm /> */}
+      </li>
+    </div>
   );
 };
 

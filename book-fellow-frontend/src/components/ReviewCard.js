@@ -1,13 +1,14 @@
 import React from "react";
-import { getMyReviews } from "../actions/myReviews";
 
-const ReviewCard = ({ review }) => {
+const ReviewCard = ({ reviews }) => {
   return (
-    <p>
-      <b>comment:{review.content}</b>
-      Rating:{review.rating}
-      <br />
-    </p>
+    <div>
+      {reviews.map(r => (
+        <li>
+          {r.content} {r.rating}
+        </li>
+      ))}
+    </div>
   );
 };
 

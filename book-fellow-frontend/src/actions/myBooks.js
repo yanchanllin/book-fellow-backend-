@@ -6,6 +6,12 @@ export const setMyBooks = books => {
   };
 };
 
+export const clearBooks = () => {
+  return {
+    type: "CLEAR_BOOKS"
+  };
+};
+
 //async actions
 export const getMyBooks = () => {
   return dispatch => {

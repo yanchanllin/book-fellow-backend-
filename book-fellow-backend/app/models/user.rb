@@ -3,4 +3,8 @@ class User < ApplicationRecord
 
     has_many :books
     has_many :reviews
+
+
+    validates :name, :username, presence: true
+    validates :username, uniqueness: true
 end

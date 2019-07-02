@@ -1,5 +1,5 @@
 import { resetLoginForm } from "./loginForm.js";
-import { getMyBooks } from "./myBooks.js";
+import { getMyBooks, clearBooks } from "./myBooks.js";
 //synchronous action creators
 export const setCurrentUser = user => {
   return {
@@ -39,9 +39,10 @@ export const login = credentials => {
   };
 };
 
-export const logout = () => {
+export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser());
+    dispatch(clearBooks());
     return fetch("http://localhost:3000/api/v1/logout", {
       credentials: "include",
       method: "DELETE"

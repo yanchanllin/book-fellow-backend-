@@ -21,12 +21,16 @@ class Api::V1::ReviewsController < ApplicationController
         @review = Review.new(review_params)
      
         if @review.save
-            render json: @review, status: :created, location: @review
-       else
-         render json: @review.errors, status: :unprocessable_entity
-       end
-     end
-    
+            render json: ReviewSerializer.new(@reviews), status: :created
+          else
+            error_resp = {
+              error: @review.errors.full_messages.to_sentence
+            }
+            render json: error_resp, status: :unprocessable_entity
+          end
+        end
+   
+
      def update
         if @review.update(review_params)
           render json: @review

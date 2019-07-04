@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import Login from "./Login.js";
+import { NavLink } from "react-router-dom";
 import Logout from "./Logout.js";
 
-const NavBar = ({ currentUser }) => {
+const NavBar = ({ currentUser, loggedIn }) => {
   return (
     <div className="NavBar">
       {currentUser ? (
@@ -11,14 +11,26 @@ const NavBar = ({ currentUser }) => {
       ) : (
         ""
       )}
-      {currentUser ? <Logout /> : <Login />}
+      <NavLink exact activeClassName="active" to="/books">
+        My Books |{" "}
+      </NavLink>
+      <NavLink exact activeClassName="active" to="/books/new">
+        New Book |{" "}
+      </NavLink>
+      {/* {currentUser ? <Logout /> : <Login />} */}
+      {loggedIn ? (
+        <>
+          <Logout />
+        </>
+      ) : null}
     </div>
   );
 };
 
 const mapStateToProps = ({ currentUser }) => {
   return {
-    currentUser
+    currentUser,
+    loggedIn: !!currentUser
   };
 };
 

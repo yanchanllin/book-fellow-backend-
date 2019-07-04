@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   has_many :reviews
-  has_many :users
+  has_one :user
   
-  validates :name, :user, presence: true
+  validates :name, presence: true
 end

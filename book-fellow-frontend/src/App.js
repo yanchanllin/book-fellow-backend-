@@ -6,6 +6,10 @@ import MainContainer from "./components/MainContainer.js";
 import NavBar from "./components/NavBar.js";
 import Login from "./components/Login.js";
 import Logout from "./components/Logout.js";
+import MyBooks from "./components/MyBooks.js";
+import BookForm from "./components/BookForm.js";
+// import ReviewForm from "./components/ReviewForm.js";
+import BookCard from "./components/BookCard.js";
 import { Route, Switch, withRouter, Link } from "react-router-dom";
 
 class App extends React.Component {
@@ -13,12 +17,26 @@ class App extends React.Component {
     this.props.getCurrentUser();
   }
   render() {
-    const { loggedIn } = this.props;
+    const { loggedIn, books } = this.props;
     return (
       <div className="App">
-        <NavBar />
-        <MainContainer />
-        <Route exact path="/login" component={Login} />
+        {loggedIn ? <NavBar /> : <Login />}
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/books" component={MyBooks} />
+          <Route exact path="/books/new" component={BookForm} />
+          <Route
+            exact
+            path="/books/:id"
+            render={props => {
+              const book = books.find(
+                book => book.id === props.match.params.id
+              );
+              console.log(book);
+              return <BookCard book={book} {...props} />;
+            }}
+          />
+        </Switch>
       </div>
     );
   }
@@ -26,7 +44,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: !!state.currentUser
+    loggedIn: !!state.currentUser,
+    books: state.myBooks
   };
 };
 

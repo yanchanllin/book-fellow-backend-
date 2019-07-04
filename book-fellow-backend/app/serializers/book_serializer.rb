@@ -1,6 +1,6 @@
 class BookSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :author, :description
+  attributes :name, :author, :description, :user_id
 
   attribute :reviews do |book|
     book.reviews.map do |rev|

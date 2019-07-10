@@ -1,16 +1,35 @@
 // sync actions
 
-export const updateNewBookForm = (name, value) => {
+export const updateBookForm = (name, value) => {
   const formData = { name, value };
   return {
-    type: "UPDATE_NEW_BOOK_FORM",
+    type: "UPDATE_BOOK_FORM",
     formData
+  };
+};
+
+export const updateBookSuccess = book => {
+  return {
+    type: "UPDATE_Book",
+    book
   };
 };
 
 export const resetNewBookForm = () => {
   return {
     type: "RESET_NEW_BOOK_FORM"
+  };
+};
+
+export const setFormDataForEdit = book => {
+  const bookFormData = {
+    name: book.attributes.name,
+    author: book.attributes.author,
+    description: book.attributes.description
+  };
+  return {
+    type: "SET_FORM_DATA_FOR_EDIT",
+    bookFormData
   };
 };
 
@@ -43,6 +62,35 @@ export const createBook = (bookData, history) => {
           alert(resp.error);
         } else {
           dispatch(addBook(resp.data));
+          dispatch(resetNewBookForm());
+          history.push(`/books/${resp.data.id}`);
+        }
+      })
+      .catch(console.log);
+  };
+};
+export const updateBook = (bookData, history) => {
+  return dispatch => {
+    const sendableBookData = {
+      start_date: bookData.startDate,
+      end_date: bookData.endDate,
+      name: bookData.name,
+      user_id: bookData.userId
+    };
+    return fetch(`http://localhost:3001/api/v1/books/${bookData.bookId}`, {
+      credentials: "include",
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sendableBookData)
+    })
+      .then(r => r.json())
+      .then(resp => {
+        if (resp.error) {
+          alert(resp.error);
+        } else {
+          dispatch(updateBookSuccess(resp.data));
           dispatch(resetNewBookForm());
           history.push(`/books/${resp.data.id}`);
         }

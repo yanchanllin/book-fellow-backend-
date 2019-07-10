@@ -4,6 +4,8 @@ export default (state = [], action) => {
       return action.books;
     case "ADD_BOOK":
       return state.concat(action.book);
+    case "UPDATE_BOOK":
+      return state;
     case "CLEAR_BOOKS":
       return [];
     default:

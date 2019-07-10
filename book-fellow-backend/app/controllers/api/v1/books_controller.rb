@@ -6,7 +6,7 @@ class Api::V1::BooksController < ApplicationController
         render json: BookSerializer.new(@books)
         else 
             render json: {
-                error: "Must be logged in to see trips"
+                error: "Must be logged in to see books"
             }
       end
     end 
@@ -36,6 +36,10 @@ class Api::V1::BooksController < ApplicationController
           render json: @book.errors, status: :unprocessable_entity
         end
       end
+
+    def destroy
+      @book.destroy
+    end
 
     private
 

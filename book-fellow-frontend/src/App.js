@@ -10,21 +10,24 @@ import MyBooks from "./components/MyBooks.js";
 import BookForm from "./components/BookForm.js";
 // import ReviewForm from "./components/ReviewForm.js";
 import BookCard from "./components/BookCard.js";
+import NewBookFormWrapper from "./components/NewBookFormWrapper.js";
+import EditBookFormWrapper from "./components/EditBookFormWrapper";
 import { Route, Switch, withRouter, Link } from "react-router-dom";
+import { setFormDataForEdit } from "./actions/bookForm";
 
 class App extends React.Component {
   componentDidMount() {
     this.props.getCurrentUser();
   }
   render() {
-    const { loggedIn, books } = this.props;
+    const { loggedIn, books, setFormDataForEdit } = this.props;
     return (
       <div className="App">
         {loggedIn ? <NavBar /> : <Login />}
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/books" component={MyBooks} />
-          <Route exact path="/books/new" component={BookForm} />
+          <Route exact path="/books/new" component={NewBookFormWrapper} />
           <Route
             exact
             path="/books/:id"
@@ -34,6 +37,18 @@ class App extends React.Component {
               );
               console.log(book);
               return <BookCard book={book} {...props} />;
+            }}
+          />
+
+          <Route
+            exact
+            path="/books/:id/edit"
+            render={props => {
+              const book = books.find(
+                book => book.id === props.match.params.id
+              );
+
+              return <EditBookFormWrapper book={book} {...props} />;
             }}
           />
         </Switch>
@@ -52,6 +67,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { getCurrentUser }
+    { getCurrentUser, setFormDataForEdit }
   )(App)
 );

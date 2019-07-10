@@ -39,6 +39,11 @@ class Api::V1::ReviewsController < ApplicationController
         end
       end
 
+    def destroy
+      @review.destroy
+    end
+
+
     private
 
       def set_review

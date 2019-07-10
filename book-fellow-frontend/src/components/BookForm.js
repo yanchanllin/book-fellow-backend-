@@ -1,34 +1,30 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import { updateNewBookForm } from "../actions/bookForm.js";
-import { createBook } from "../actions/bookForm.js";
+import { updateBookForm } from "../actions/bookForm.js";
 
 const BookForm = ({
   formData,
   history,
-  updateNewBookForm,
-  createBook,
-  userId
+  updateBookForm,
+  userId,
+  book,
+  handleSubmit,
+  editMode
 }) => {
   const { name, author, description } = formData;
 
   const handleChange = event => {
     const { name, value } = event.target;
-    updateNewBookForm(name, value);
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    createBook({
-      ...formData,
-      userId,
-      history
-    });
+    updateBookForm(name, value);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={event => {
+        handleSubmit(event, formData, userId, history);
+      }}
+    >
       <input
         placeholder="name"
         name="name"
@@ -50,7 +46,7 @@ const BookForm = ({
         value={description}
       />
       <br />
-      <input type="submit" value="Create Book" />
+      <input type="submit" value={editMode ? "Update Book" : "Create Book"} />
     </form>
   );
 };
@@ -64,5 +60,5 @@ const mapStateToProps = state => {
 };
 export default connect(
   mapStateToProps,
-  { updateNewBookForm, createBook }
+  { updateBookForm }
 )(BookForm);

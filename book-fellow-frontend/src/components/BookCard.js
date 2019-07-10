@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ReviewCard from "./ReviewCard.js";
 // import ReviewForm from "./ReviewForm.js";
 
@@ -13,6 +14,7 @@ const BookCard = ({ book }) => {
       Review: <ReviewCard reviews={book.attributes.reviews} />
       {/* <ReviewForm /> */}
       <br />
+      <Link to={`/books/${book.id}/edit`}>Edit this book</Link>
     </div>
   ) : (
     <p>This the the BOOK card with no BOOK!</p>

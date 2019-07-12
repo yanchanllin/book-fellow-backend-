@@ -8,6 +8,11 @@ export default (state = [], action) => {
       return state;
     case "CLEAR_BOOKS":
       return [];
+    case "DELETE_BOOK_SUCCESS":
+      return {
+        ...state,
+        books: state.books.filter(book => book.id !== action.id)
+      };
     default:
       return state;
   }

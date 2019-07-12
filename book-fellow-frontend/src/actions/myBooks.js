@@ -12,6 +12,13 @@ export const clearBooks = () => {
   };
 };
 
+export const deleteBookSuccess = id => {
+  return {
+    type: "DELETE_BOOK_SUCCESS",
+    id
+  };
+};
+
 //async actions
 export const getMyBooks = () => {
   return dispatch => {
@@ -33,3 +40,17 @@ export const getMyBooks = () => {
       .catch(console.log);
   };
 };
+
+// export function deleteBook(data) {
+//   return dispatch => {
+//     fetch("http://localhost:3000/api/v1/books/${data.bookId}", {
+//       method: "DELETE",
+//       body: JSON.stringify(data),
+//       headers: {
+//         "Content-Type": "application/json"
+//       }
+//     })
+//       .then(response => response)
+//       .then(id => dispatch(deleteBookSuccess(id)));
+//   };
+// }

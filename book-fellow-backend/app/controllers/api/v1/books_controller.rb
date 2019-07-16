@@ -1,4 +1,5 @@
 class Api::V1::BooksController < ApplicationController
+  before_action :set_book, only: [:show, :update, :destroy]
 
     def index
         if logged_in?
@@ -16,10 +17,22 @@ class Api::V1::BooksController < ApplicationController
       end
 
     def create
-    @book = Book.new(book_params)
+      @book = current_user.books.build(book_params)
 
     if @book.save
-      render json: BookSerializer.new(@books), status: :created
+      render json: BookSerializer.new(@book), status: :created
+    else
+      error_resp = {
+        error: @book.errors.full_messages.to_sentence
+      }
+      render json: error_resp, status: :unprocessable_entity
+    end
+  end
+     
+    def update
+        if @book.update(book_params)
+          render json: BookSerializer.new(@book), status: :ok
+         
     else
       error_resp = {
         error: @book.errors.full_messages.to_sentence
@@ -28,18 +41,17 @@ class Api::V1::BooksController < ApplicationController
     end
   end
 
-     
-    def update
-        if @book.update(book_params)
-          render json: @book
-        else
-          render json: @book.errors, status: :unprocessable_entity
-        end
+    def destroy 
+      if @book.destroy
+        render json:  { data: "Book successfully destroyed" }, status: :ok
+      else
+        error_resp = {
+          error: "Book not found and not destroyed"
+        }
+        render json: error_resp, status: :unprocessable_entity
       end
-
-    def destroy
-      @book.destroy
     end
+    
 
     private
 

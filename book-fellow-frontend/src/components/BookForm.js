@@ -5,7 +5,6 @@ import { updateBookForm } from "../actions/bookForm.js";
 
 const BookForm = ({
   formData,
-  history,
   updateBookForm,
   userId,
   book,
@@ -22,7 +21,8 @@ const BookForm = ({
   return (
     <form
       onSubmit={event => {
-        handleSubmit(event, formData, userId, history);
+        event.preventDefault();
+        handleSubmit(formData, userId);
       }}
     >
       <input

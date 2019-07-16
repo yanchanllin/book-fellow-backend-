@@ -10,7 +10,7 @@ export const updateBookForm = (name, value) => {
 
 export const updateBookSuccess = book => {
   return {
-    type: "UPDATE_Book",
+    type: "UPDATE_BOOK",
     book
   };
 };
@@ -72,12 +72,12 @@ export const createBook = (bookData, history) => {
 export const updateBook = (bookData, history) => {
   return dispatch => {
     const sendableBookData = {
-      start_date: bookData.startDate,
-      end_date: bookData.endDate,
+      description: bookData.description,
+      author: bookData.author,
       name: bookData.name,
       user_id: bookData.userId
     };
-    return fetch(`http://localhost:3001/api/v1/books/${bookData.bookId}`, {
+    return fetch(`http://localhost:3000/api/v1/books/${bookData.bookId}`, {
       credentials: "include",
       method: "PATCH",
       headers: {
@@ -91,7 +91,6 @@ export const updateBook = (bookData, history) => {
           alert(resp.error);
         } else {
           dispatch(updateBookSuccess(resp.data));
-          dispatch(resetNewBookForm());
           history.push(`/books/${resp.data.id}`);
         }
       })

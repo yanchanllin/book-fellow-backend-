@@ -4,9 +4,7 @@ import { createBook } from "../actions/bookForm";
 import { connect } from "react-redux";
 
 const NewBookFormWrapper = ({ history, createBook }) => {
-  const handleSubmit = (event, formData, userId, history) => {
-    event.preventDefault();
-
+  const handleSubmit = (formData, userId) => {
     createBook(
       {
         ...formData,

@@ -7,15 +7,15 @@ const NavBar = ({ currentUser, loggedIn }) => {
   return (
     <div className="NavBar">
       {currentUser ? (
-        <strong> Welcome, {currentUser.attributes.username} !</strong>
+        <strong> Welcome, {currentUser.attributes.username} </strong>
       ) : (
         ""
       )}
       <NavLink exact activeClassName="active" to="/books">
-        My Books |{" "}
+        My Books{" "}
       </NavLink>
       <NavLink exact activeClassName="active" to="/books/new">
-        New Book |{" "}
+        New Book{" "}
       </NavLink>
       {/* {currentUser ? <Logout /> : <Login />} */}
       {loggedIn ? (

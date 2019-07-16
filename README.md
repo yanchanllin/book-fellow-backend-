@@ -8,9 +8,13 @@ Installation Instructions
 Setup Rails API backend:
 Clone this repo, and then navigate to the repo directory in your terminal.
 
+Change directories into backend folder: cd book-fellow-backend.
+
 Run bundle install to install all gem dependencies.
 
 Run all rake migrations with rake db:migrate
+
+Then load rails s to start.
 
 Setup React server frontend:
 Change directories into client folder: cd book-fellow-frontend
@@ -26,3 +30,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/yancha
 
 License
 The gem is available as open source under the terms of the MIT License.
+

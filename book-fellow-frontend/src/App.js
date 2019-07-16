@@ -14,7 +14,7 @@ import NewBookFormWrapper from "./components/NewBookFormWrapper.js";
 import EditBookFormWrapper from "./components/EditBookFormWrapper";
 import { Route, Switch, withRouter, Link } from "react-router-dom";
 import { setFormDataForEdit } from "./actions/bookForm";
-import { deleteBookSuccess } from "./actions/myBooks";
+import { deleteBook } from "./actions/myBooks";
 
 class App extends React.Component {
   componentDidMount() {
@@ -42,7 +42,13 @@ class App extends React.Component {
                 book => book.id === props.match.params.id
               );
 
-              return <BookCard book={book} {...props} />;
+              return (
+                <BookCard
+                  book={book}
+                  deleteBook={this.props.deleteBook}
+                  {...props}
+                />
+              );
             }}
           />
 
@@ -55,17 +61,6 @@ class App extends React.Component {
               );
 
               return <EditBookFormWrapper book={book} {...props} />;
-            }}
-          />
-          <Route
-            exact
-            path="/books"
-            render={props => {
-              const book = books.find(
-                book => book.id === props.match.params.id
-              );
-              console.log(book);
-              return <BookCard book={book} {...props} />;
             }}
           />
         </Switch>
@@ -84,6 +79,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { getCurrentUser, setFormDataForEdit, deleteBookSuccess }
+    { getCurrentUser, setFormDataForEdit, deleteBook }
   )(App)
 );

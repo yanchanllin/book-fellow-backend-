@@ -12,10 +12,10 @@ export const clearBooks = () => {
   };
 };
 
-export const deleteBookSuccess = id => {
+export const deleteBookSuccess = bookId => {
   return {
     type: "DELETE_BOOK_SUCCESS",
-    id
+    id: bookId
   };
 };
 
@@ -41,16 +41,15 @@ export const getMyBooks = () => {
   };
 };
 
-// export function deleteBook(data) {
-//   return dispatch => {
-//     fetch("http://localhost:3000/api/v1/books/${data.bookId}", {
-//       method: "DELETE",
-//       body: JSON.stringify(data),
-//       headers: {
-//         "Content-Type": "application/json"
-//       }
-//     })
-//       .then(response => response)
-//       .then(id => dispatch(deleteBookSuccess(id)));
-//   };
-// }
+export function deleteBook(data) {
+  return dispatch => {
+    fetch(`http://localhost:3000/api/v1/books/${parseInt(data)}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response)
+      .then(id => dispatch(deleteBookSuccess(data)));
+  };
+}

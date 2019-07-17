@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ReviewCard from "./ReviewCard.js";
 // import ReviewForm from "./ReviewForm.js";
-// import { deleteBookSuccess } from "../actions/myBooks";
 
 class BookCard extends Component {
   render() {

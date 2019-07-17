@@ -38,3 +38,12 @@
   color: orangered;
   justify-content: space-evenly;
 }
+body {
+  background: hsla(96, 19%, 59%, 0.863);
+}
+.card {
+  font-size: 200%;
+  background-color: whitesmoke;
+  justify-content: space-evenly;
+  flex-direction: row;
+}

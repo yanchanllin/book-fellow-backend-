@@ -11,11 +11,11 @@ class MyBooks extends React.Component {
       timesClicked: 0
     };
   }
-  handleClick = () => {
-    this.setState({
-      timesClicked: this.state.timesClicked + 1
-    });
-  };
+  // handleClick = () => {
+  //   this.setState({
+  //     timesClicked: this.state.timesClicked + 1
+  //   });
+  // };
 
   render() {
     const bookCards = this.props.books.map(b => (

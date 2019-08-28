@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 
 const NewBookFormWrapper = ({ history, createBook }) => {
   const handleSubmit = (formData, userId) => {
+    console.log('A');
     createBook(
       {
         ...formData,
@@ -12,6 +13,7 @@ const NewBookFormWrapper = ({ history, createBook }) => {
       },
       history
     );
+    console.log('B');
   };
   return <BookForm history={history} handleSubmit={handleSubmit} />;
 };

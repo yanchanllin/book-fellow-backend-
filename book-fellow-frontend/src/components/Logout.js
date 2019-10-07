@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 const Logout = ({ logout, history }) => {
   return (
     <form
+      class="my-form"
       onSubmit={event => {
         event.preventDefault();
         logout();

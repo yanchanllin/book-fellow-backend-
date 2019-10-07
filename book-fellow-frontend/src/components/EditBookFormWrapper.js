@@ -33,7 +33,6 @@ class EditBookFormWrapper extends React.Component {
   };
 
   render() {
-    const { history, handleSubmit } = this.props;
     return <BookForm editMode handleSubmit={this.handleSubmit} />;
   }
 }

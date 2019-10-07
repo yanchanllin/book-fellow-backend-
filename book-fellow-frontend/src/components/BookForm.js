@@ -19,6 +19,7 @@ const BookForm = ({
 
   return (
     <form
+      class="my-form"
       onSubmit={event => {
         event.preventDefault();
         handleSubmit(formData, userId);

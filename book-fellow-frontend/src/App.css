@@ -1,49 +1,75 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-image: url("https://img3.goodfon.com/original/1920x1080/c/9a/sankt-peterburg-ekaterininskii-park-osen-dozhd.jpg")
 }
 
 .NavBar {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
   flex-direction: row;
   color: orangered;
   justify-content: space-evenly;
+  font-size: 150%;
+  padding: 0px 39px 0px 12px;
+
 }
+
+button {
+  background: gray;
+  color: #fff;
+  padding:10px 15px;
+  border:none;
+}
+
+button:hover {
+  color:#000;
+  background-color: orangered;
+}
+
 body {
   background: hsla(96, 19%, 59%, 0.863);
 }
+
 .card {
-  font-size: 200%;
-  background-color: whitesmoke;
+  font-size: 160%;
+  background-color: rgb(253, 253, 253);
   justify-content: space-evenly;
   flex-direction: row;
+  padding: 10px;
+  border-bottom-right-radius: 15%;
+  border-top-right-radius: 15%;
+}
+
+a{
+  text-decoration-line: none;
+  color:#000;
+}
+
+a:hover{
+  color:orangered;
+  text-decoration-line: underline;
+}
+
+div.card-title.h5{
+   background-color: hsla(96, 36%, 84%, 0.863);
+   font-style: italic;
+   color:#f08f10;
+}
+
+.my-form {
+  padding: 20px;
+}
+
+.my-form input[type="submit"] {
+  color: #000;
+  font-size: 15px;
+  padding: 8px;
+  border:none;
+  border-radius: 15%;
+}
+
+.my-form input[type="submit"]:hover{
+  color:#000;
+  background-color: hsla(96, 36%, 84%, 0.863);
+  border-radius: 15%;
 }

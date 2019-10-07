@@ -7,7 +7,6 @@ import myBooks from "./reducers/myBooks.js";
 import bookForm from "./reducers/bookForm.js";
 import reviewForm from "./reducers/reviewForm.js";
 
-const users = () => [];
 const reducer = combineReducers({
   // users: usersReducer, //array of users
   currentUser,

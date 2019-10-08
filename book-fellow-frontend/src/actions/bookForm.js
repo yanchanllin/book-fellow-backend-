@@ -1,5 +1,4 @@
 // sync actions
-
 export const updateBookForm = (name, value) => {
   const formData = { name, value };
   return {
@@ -41,7 +40,6 @@ export const addBook = book => {
 };
 //async actions
 export const createBook = (bookData, history) => {
-
   return dispatch => {
     const sendableBookData = {
       name: bookData.name,
@@ -62,7 +60,6 @@ export const createBook = (bookData, history) => {
         if (resp.error) {
           alert(resp.error);
         } else {
-
           dispatch(addBook(resp.data));
           dispatch(resetNewBookForm());
           history.push(`/books/${resp.data.id}`);
@@ -70,8 +67,8 @@ export const createBook = (bookData, history) => {
       })
       .catch(console.log);
   };
-
 };
+
 export const updateBook = (bookData, history) => {
   return dispatch => {
     const sendableBookData = {

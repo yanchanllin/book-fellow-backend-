@@ -1,7 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
 
     def index
-
         if params[:book_id]
             @reviews = Book.find(params[:book_id]).reviews
         render json: ReviewSerializer.new(@reviews)
@@ -19,7 +18,6 @@ class Api::V1::ReviewsController < ApplicationController
         
     def create
         @review = Review.new(review_params)
-     
         if @review.save
             render json: ReviewSerializer.new(@reviews), status: :created
           else
@@ -28,8 +26,7 @@ class Api::V1::ReviewsController < ApplicationController
             }
             render json: error_resp, status: :unprocessable_entity
           end
-        end
-   
+        end 
 
      def update
         if @review.update(review_params)
@@ -45,7 +42,6 @@ class Api::V1::ReviewsController < ApplicationController
 
 
     private
-
       def set_review
         @review = Review.find(params[:id])
       end

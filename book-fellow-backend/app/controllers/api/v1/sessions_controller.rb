@@ -28,5 +28,4 @@ class Api::V1::SessionsController < ApplicationController
       notice: "successfully logged out"
     }, status: :ok
   end
-
 end

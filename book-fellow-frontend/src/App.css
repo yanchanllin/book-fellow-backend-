@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-image: url("https://img3.goodfon.com/original/1920x1080/c/9a/sankt-peterburg-ekaterininskii-park-osen-dozhd.jpg")
 }
 
 .NavBar {
@@ -11,8 +10,8 @@
   justify-content: space-evenly;
   font-size: 150%;
   padding: 0px 39px 0px 12px;
-
 }
+
 button {
   background: gray;
   color: #fff;
@@ -27,6 +26,7 @@ button:hover {
 
 body {
   background: hsla(96, 19%, 59%, 0.863);
+  background-image: url("https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1000")
 }
 
 .card {
@@ -40,8 +40,12 @@ body {
 }
 
 a{
-  text-decoration-line: none;
-  color:#000;
+  text-decoration-line: underline;
+<<<<<<< HEAD
+  color:rgb(145, 80, 7);
+=======
+  color:rgb(107, 207, 60);
+>>>>>>> background-image
 }
 
 a:hover{
@@ -52,7 +56,7 @@ a:hover{
 div.card-title.h5{
    background-color: hsla(96, 36%, 84%, 0.863);
    font-style: italic;
-   color:#f08f10;
+   color:#b96d09;
 }
 
 .my-form {
@@ -65,10 +69,11 @@ div.card-title.h5{
   padding: 8px;
   border:none;
   border-radius: 15%;
+  background-color: hsla(96, 36%, 84%, 0.863);
 }
 
 .my-form input[type="submit"]:hover{
   color:#000;
-  background-color: hsla(96, 36%, 84%, 0.863);
+  background-color: whitesmoke;
   border-radius: 15%;
 }

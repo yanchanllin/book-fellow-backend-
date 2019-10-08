@@ -1,5 +1,6 @@
 import { resetLoginForm } from "./loginForm.js";
 import { getMyBooks, clearBooks } from "./myBooks.js";
+
 //synchronous action creators
 export const setCurrentUser = user => {
   return {
@@ -13,6 +14,7 @@ export const clearCurrentUser = () => {
     type: "CLEAR_CURRENT_USER"
   };
 };
+
 //asynchronous action creators
 export const login = credentials => {
   // console.log("credentials are", credentials);

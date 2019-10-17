@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 
 class MyBooks extends React.Component {
-
   render() {
     const bookCards = this.props.books.map((b) => (
       <>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 30px 450px 90px 450px;
 }
 
 .NavBar {
@@ -33,7 +34,7 @@ body {
   background-color: rgb(253, 253, 253);
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 10px;
+  padding: 10px; 
   border-bottom-right-radius: 15%;
   border-top-right-radius: 15%;
 }

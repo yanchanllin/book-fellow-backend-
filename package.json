@@ -1,0 +1,14 @@
+{
+  "name": "book-fellow",
+  "version": "1.0.0",
+  "description": "heroku web deploy",
+  "main": "index.js ",
+  "repository": "git@github.com:yanchanllin/book-fellow.git",
+  "author": "yanchanllin <yonalin1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  }
+}

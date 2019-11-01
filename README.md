@@ -1,8 +1,5 @@
 # Book Fellow
-
-CRUD App using React/Redux framework.
-
-Built using HTML, CSS, Javascript, Ruby on Rails, React, and Materialize CSS framework
+Build CRUD application using HTML, CSS, Javascript, Ruby on Rails, React, Redux and Materialize CSS framework
 
 Installation Instructions
 Setup Rails API backend:

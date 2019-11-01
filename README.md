@@ -14,6 +14,8 @@ Run all rake migrations with rake db:migrate
 
 Then load rails s to start.
 
+
+
 *Setup React server frontend:
 Change directories into client folder: cd book-fellow-frontend
 

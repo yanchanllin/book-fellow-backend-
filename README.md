@@ -1,5 +1,5 @@
 # Book Fellow
-Build CRUD application using HTML, CSS, Javascript, Ruby on Rails, React, Redux and Materialize CSS framework
+Build CRUD application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework
 
 #Installation Instructions
 

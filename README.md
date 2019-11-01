@@ -4,6 +4,7 @@ Build CRUD application using HTML, CSS, Javascript, Ruby on Rails, React, Redux 
 #Installation Instructions
 
 *Setup Rails API backend:
+
 Clone this repo, and then navigate to the repo directory in your terminal.
 
 Change directories into backend folder: cd book-fellow-backend.
@@ -15,8 +16,8 @@ Run all rake migrations with rake db:migrate
 Then load rails s to start.
 
 
-
 *Setup React server frontend:
+
 Change directories into client folder: cd book-fellow-frontend
 
 Run npm install to install all package dependencies

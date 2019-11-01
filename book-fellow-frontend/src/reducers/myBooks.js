@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
       return initialState;
     case "DELETE_BOOK_SUCCESS":
       return state.filter(book => book.id !== action.id);
-
     default:
       return state;
   }

@@ -18,7 +18,7 @@ Then load rails s to start.
 
 Open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit.)
 
-## Setup React server frontend:
+## Setup React server client side:
 
 Change directories into client folder: cd book-fellow-frontend
 

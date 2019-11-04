@@ -1,10 +1,10 @@
-#Book Fellow
+# Book Fellow
 
 Build CRUD application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework
 
 #Installation Instructions
 
-*Setup Rails API backend:
+## Setup Rails API backend:
 
 Clone this repo, and then navigate to the repo directory in your terminal.
 
@@ -18,7 +18,7 @@ Then load rails s to start.
 
 Open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit.)
 
-*Setup React server frontend:
+## Setup React server frontend:
 
 Change directories into client folder: cd book-fellow-frontend
 

@@ -2,9 +2,9 @@
 
 Build CRUD application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework
 
-Installation Instructions
+## Installation Instructions
 
-## Setup Rails API backend:
+### Setup Rails API backend:
 
 Clone this repo, and then navigate to the repo directory in your terminal.
 
@@ -18,7 +18,7 @@ Then load rails s to start.
 
 Open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit.)
 
-## Setup React server client side:
+### Setup React server client side:
 
 Change directories into client folder: cd book-fellow-frontend
 
@@ -30,9 +30,9 @@ Run Rake Start to start up both servers.
 
 Open your browser and navigate to `http://localhost:3001` (press ctrl-C or control-C while in the terminal to exit.)
 
-Contributing
+## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/yanchanllin/book-fellow.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-License
+## License
 The gem is available as open source under the terms of the MIT License.
 

@@ -15,6 +15,7 @@ Run all rake migrations with rake db:migrate
 
 Then load rails s to start.
 
+Open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit.)
 
 *Setup React server frontend:
 

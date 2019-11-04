@@ -2,7 +2,7 @@
 
 Build CRUD application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework
 
-#Installation Instructions
+Installation Instructions
 
 ## Setup Rails API backend:
 

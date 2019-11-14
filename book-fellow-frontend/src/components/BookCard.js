@@ -48,7 +48,7 @@ class BookCard extends Component {
         ))}
       </>
     ) : (
-        <p>This the the BOOK card with no BOOK!</p>
+        <p>This the the card with no book!</p>
       );
   }
 }

@@ -1,9 +1,10 @@
 # Book Fellow
-Build CRUD application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework
 
-#Installation Instructions
+Book social application for children's books educational or beginner readings, user can CRUD and recommend books for other parents/kids. User can also read other's book suggestions. Build this application using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework.
 
-*Setup Rails API backend:
+## Installation Instructions
+
+### Setup Rails API backend:
 
 Clone this repo, and then navigate to the repo directory in your terminal.
 
@@ -15,8 +16,9 @@ Run all rake migrations with rake db:migrate
 
 Then load rails s to start.
 
+Open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit.)
 
-*Setup React server frontend:
+### Setup React server client side:
 
 Change directories into client folder: cd book-fellow-frontend
 
@@ -26,9 +28,11 @@ Run npm install es6-promise
 
 Run Rake Start to start up both servers.
 
-Contributing
+Open your browser and navigate to `http://localhost:3001` (press ctrl-C or control-C while in the terminal to exit.)
+
+## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/yanchanllin/book-fellow.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-License
+## License
 The gem is available as open source under the terms of the MIT License.
 

@@ -6,11 +6,11 @@ Book social application for children's books educational or beginner readings, u
 
 ### Setup Rails API backend:
 
-Clone this repo, and then navigate to the repo directory in your terminal.
+Clone this repo, and navigate to the repo directory in your terminal
 
-Change directories into backend folder: cd book-fellow-backend.
+Change directories into backend folder: cd book-fellow-backend
 
-Run bundle install to install all gem dependencies.
+Run bundle install to install all gem dependencies
 
 Run all rake migrations with rake db:migrate
 

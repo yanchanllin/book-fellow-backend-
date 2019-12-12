@@ -1,6 +1,6 @@
 # Book Fellow
 
-Book social application for children's books educational or beginner readings, user can CRUD and recommend books for other parents/kids. User can also read other's book suggestions. This application build using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework.
+Book social application for children's books educational or beginner readings, user can CRUD and recommend books for other parents/kids. User can also read other's book suggestions. This application is using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework.
 
 ## Installation Instructions
 

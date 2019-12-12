@@ -12,7 +12,7 @@ Change directories into backend folder: cd book-fellow-backend
 
 Run bundle install to install all gem dependencies
 
-Run all rake migrations with rake db:migrate
+Also run all rake migrations with rake db:migrate
 
 Then load rails s to start.
 

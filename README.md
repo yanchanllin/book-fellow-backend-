@@ -28,7 +28,7 @@ Run npm install to install all package dependencies
 
 Run npm install es6-promise
 
-Run Rake Start to start up both servers.
+Run Rake Start to start up both servers
 
 Open your browser and navigate to `http://localhost:3001` (press ctrl-C or control-C while in the terminal to exit.)
 

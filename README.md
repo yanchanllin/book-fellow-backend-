@@ -30,7 +30,7 @@ Run npm install es6-promise
 
 Run Rake Start to start up both servers
 
-Open your browser and navigate to `http://localhost:3001` (press ctrl-C or control-C while in the terminal to exit.)
+Open your browser and navigate to `http://localhost:3001` (press ctrl-C or control-C while in the terminal to exit)
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/yanchanllin/book-fellow.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.

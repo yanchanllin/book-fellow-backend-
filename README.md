@@ -18,7 +18,7 @@ Also run all rake migrations with rake db:migrate
 
 Then load rails s to start
 
-If you want to see this app in the browser, open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit)
+If you want to see this app in the browser, open your browser and navigate to `http://localhost:3000` (press ctrl-C or control-C while in the terminal to exit).
 
 ### Setup React server client side:
 

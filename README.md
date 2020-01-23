@@ -3,7 +3,7 @@
 
 ## Background
 Book social application is for children's books and beginner readers, user can CRUD and recommend books for other parents/kids. Also user can read other's book suggestions. 
-This application is using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework.
+The application is using React, Redux, Ruby on Rails, HTML, Javascript and Materialize CSS framework.
 
 ## Installation Instructions
 

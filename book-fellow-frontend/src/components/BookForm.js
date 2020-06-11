@@ -11,6 +11,7 @@ const BookForm = ({
   editMode
 }) => {
   const { name, author, description } = formData;
+
   const handleChange = event => {
     const { name, value } = event.target;
     updateBookForm(name, value);

@@ -40,7 +40,6 @@ class Api::V1::ReviewsController < ApplicationController
       @review.destroy
     end
 
-
     private
       def set_review
         @review = Review.find(params[:id])

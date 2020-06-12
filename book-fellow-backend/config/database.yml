@@ -3,6 +3,8 @@ development:
   database: book_fellow_development
   pool: 5
   timeout: 5000
+  username: learn
+  password: 'password'
 test:
   adapter: postgresql
   database: book_fellow_test

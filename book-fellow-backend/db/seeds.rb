@@ -8,7 +8,7 @@
 
 
 # lili = User.first
-# User.create(name:"Amy", username:"Amyl", password:"password")
+User.create(name:"Amy", username:"Amyl", password:"password")
 # amy = User.second
 # amy.books.create(name: "Blue", author:"Chris Lam", description:"It's good for age 4 & up")
  

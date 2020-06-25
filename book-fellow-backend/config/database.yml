@@ -20,6 +20,6 @@ production:
   adapter: postgresql
   database: book_fellow_production
   pool: 5
-  timeout: 5000
-  username: postgres
-  password: 'password'
+  #timeout: 5000
+  #username: postgres
+  #password: 'password'

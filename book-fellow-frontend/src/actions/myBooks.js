@@ -22,7 +22,7 @@ export const deleteBookSuccess = bookId => {
 //async actions
 export const getMyBooks = () => {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v1/books", {
+    return fetch("https://book-fellow.herokuapp.com/api/v1/books", {
       credentials: "include",
       method: "GET",
       headers: {
@@ -43,7 +43,7 @@ export const getMyBooks = () => {
 
 export function deleteBook(data) {
   return dispatch => {
-    fetch(`http://localhost:3000/api/v1/books/${parseInt(data)}`, {
+    fetch(`https://book-fellow.herokuapp.com/api/v1/books/${parseInt(data)}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"

@@ -47,7 +47,7 @@ export const createBook = (bookData, history) => {
       description: bookData.description,
       user_id: bookData.userId
     };
-    return fetch("http://localhost:3000/api/v1/books", {
+    return fetch("https://book-fellow.herokuapp.com/api/v1/books", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -77,7 +77,7 @@ export const updateBook = (bookData, history) => {
       name: bookData.name,
       user_id: bookData.userId
     };
-    return fetch(`http://localhost:3000/api/v1/books/${bookData.bookId}`, {
+    return fetch(`https://book-fellow.herokuapp.com/api/v1/books/${bookData.bookId}`, {
       credentials: "include",
       method: "PATCH",
       headers: {

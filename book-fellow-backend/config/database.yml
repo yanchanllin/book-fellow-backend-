@@ -17,8 +17,8 @@ test:
   username: postgres
   password: 'password'
 production:
-  adapter: postgresql
-  database: book_fellow_production
+  #adapter: postgresql
+  #database: book_fellow_production
   pool: 5
   #timeout: 5000
   #username: postgres

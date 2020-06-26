@@ -19,7 +19,7 @@ export const clearCurrentUser = () => {
 export const login = credentials => {
   // console.log("credentials are", credentials);
   return dispatch => {
-    return fetch("https://book-fellow.herokuapp.com/api/v1/login", {
+    return fetch("https://murmuring-atoll-04944.herokuapp.com/api/v1/login", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -45,7 +45,7 @@ export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser());
     dispatch(clearBooks());
-    return fetch("https://book-fellow.herokuapp.com/api/v1/logout", {
+    return fetch("https://murmuring-atoll-04944.herokuapp.com/api/v1/logout", {
       credentials: "include",
       method: "DELETE"
     });
@@ -54,7 +54,7 @@ export const logout = event => {
 
 export const getCurrentUser = () => {
   return dispatch => {
-    return fetch("https://book-fellow.herokuapp.com/api/v1/get_current_user", {
+    return fetch("https://murmuring-atoll-04944.herokuapp.com/api/v1/get_current_user", {
       credentials: "include",
       method: "GET",
       headers: {

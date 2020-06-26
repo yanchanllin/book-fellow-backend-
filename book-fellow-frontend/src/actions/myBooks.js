@@ -22,7 +22,7 @@ export const deleteBookSuccess = bookId => {
 //async actions
 export const getMyBooks = () => {
   return dispatch => {
-    return fetch("https://book-fellow.herokuapp.com/api/v1/books", {
+    return fetch("https://murmuring-atoll-04944.herokuapp.com/api/v1/books", {
       credentials: "include",
       method: "GET",
       headers: {
@@ -43,7 +43,7 @@ export const getMyBooks = () => {
 
 export function deleteBook(data) {
   return dispatch => {
-    fetch(`https://book-fellow.herokuapp.com/api/v1/books/${parseInt(data)}`, {
+    fetch(`https://murmuring-atoll-04944.herokuapp.com/api/v1/books/${parseInt(data)}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
